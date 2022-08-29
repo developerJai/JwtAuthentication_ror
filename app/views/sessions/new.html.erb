@@ -1,0 +1,66 @@
+<section class="">
+<!-- Jumbotron -->
+<center>
+   <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+         <div class="text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+               style="width: 185px;" alt="logo">
+            <h4 class="mt-1 mb-5 pb-1">We are The Belive in Our Team</h4>
+         </div>
+         <%=form_for :session,url:sessions_create_path,:html=>{:id=>"submit_form", :multipart => true} do |f|%>  
+         <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+               <div class="card-body py-5 px-md-5">
+                  <form>
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Email address</label>
+                        <input type="email" id="email" placeholder="Enter Email" name="email" class="form-control"  />
+                     </div>
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example4">Password</label>
+                        <input type="password" id="pass" placeholder="Enter Password" name="password" class="form-control"/>
+                     </div>
+                     <!-- Submit button -->
+                     <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">Login</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <% end %>
+</center>
+</section>
+<script>
+   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js">
+</script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+   function myFunction()
+   {
+     
+     var email = document.getElementById('email').value;
+     var pass = document.getElementById('pass').value;
+   
+   
+     if (email == "")
+     {
+       swal("Warning","Please enter valid Email ","warning");
+       return false;
+     }
+    
+     if (pass == "")
+     {
+       swal("Warning","Please enter valid password ","warning");
+       return false;
+     }
+     else
+     {
+    return true;
+     }
+   alert(a);
+   }
+</script>

@@ -1,0 +1,43 @@
+<section class="">
+<!-- Jumbotron -->
+<center>
+   <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+         <%=form_for :users,url:users_update_path,:html=>{:id=>"submit_form", :multipart => true} do |f|%>  
+         <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+               <div class="card-body py-5 px-md-5">
+                  <form>
+                     <!-- 2 column grid layout with text inputs for the first and last names -->
+                     <div class="row">
+                        <div class="form-outline mb-4">
+                           <label class="form-label" for="form3Example1">First name</label>
+                           <input type="text" id="name" name="name" value="<%=@user.name%>" placeholder="Enter Name" class="form-control" required/>
+                        </div>
+                     </div>
+                     <!-- Email input -->
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Email address</label>
+                        <input type="email" id="email" placeholder="Enter Email" value="<%=@user.email%>" name="email" class="form-control" required/>
+                     </div>
+                     <!-- Password input -->
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example4">Password</label>
+                        <input type="password" id="password_digest" placeholder="Enter Password" value="<%=@user.password_digest%>" name="password_digest" class="form-control" required/>
+                     </div>
+                     <!-- Submit button -->
+                     <button type="submit" class="btn btn-primary btn-block mb-4">
+                     Update
+                     </button>
+                     <% end %>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+</center>
+<!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

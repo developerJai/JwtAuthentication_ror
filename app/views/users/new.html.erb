@@ -1,0 +1,84 @@
+<!-- Section: Design Block -->
+<section class="">
+<!-- Jumbotron -->
+<center>
+   <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+         <div class="text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+               style="width: 185px;" alt="logo">
+            <h4 class="mt-1 mb-5 pb-1">We are The Belive in Our Team</h4>
+         </div>
+         <%=form_for :user,url:users_create_path,:html=>{:id=>"submit_form", :multipart => true} do |f|%>  
+         <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="card">
+               <div class="card-body py-5 px-md-5">
+                  <form>
+                     <!-- 2 column grid layout with text inputs for the first and last names -->
+                     <div class="row">
+                        <div class="form-outline mb-4">
+                           <label class="form-label" for="form3Example1">First name</label>
+                           <input type="text" id="fname" name="name" placeholder="Enter Name" class="form-control" required />
+                        </div>
+                     </div>
+                     <!-- Email input -->
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Email address</label>
+                        <input type="text" id="email" placeholder="Enter Email" name="email" class="form-control"  required />
+                     </div>
+                     <!-- Password input -->
+                     <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example4">Password</label>
+                        <input type="password" id="pass" placeholder="Enter Password" name="password" class="form-control" required />
+                     </div>
+                     <!-- Submit button -->
+                     <button type="submit" class="btn btn-primary btn-block mb-4" onclick="myFunction()">
+                     Sign up
+                     </button>
+                     <% end %>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+</center>
+<!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+<script>
+   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js">
+</script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+   function myFunction()
+   {
+     var name = document.getElementById('fname').value;
+     var email = document.getElementById('email').value;
+     var pass = document.getElementById('pass').value;
+   
+     if (name == "")
+     {
+       swal("Warning","Please enter valid name ","warning");
+       return false;
+     }
+     if (email == "")
+     {
+       swal("Warning","Please enter valid Email ","warning");
+       return false;
+     }
+    
+     if (pass == "")
+     {
+       swal("Warning","Please enter valid password ","warning");
+       return false;
+     }
+     else
+     {
+    return true;
+     }
+   alert(a);
+   }
+</script>
