@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     if @user.valid?
       token = encode_token({user_id: @user.id})
       UserSession.create(user_id:@user.id,token:token)
-      # render json: {user: @user, token: token }, status: :ok
       redirect_to sessions_new_path
     else
       render json: {error: 'Invalid user name or password'},status: :unprocessable_entity       
@@ -33,9 +32,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by_id(params[:id])
-    p @user
   end
-
 
   def update
     @user = User.find_by_id(params[:id])    
@@ -52,7 +49,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find_by_id(params[:id])
     if @user.present?
-      @user.destroy
+       @user.destroy
     redirect_to root_path
     end
   end 

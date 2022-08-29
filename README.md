@@ -1,30 +1,67 @@
 # README
 
-# JWT Auth with bycrypt
-
- Bycrypt function uses an algorithm to hash passwords. because This is important for user security.
- if anyone were to gain access to your database and the passwords are not hashed the user's credentials would be compromised. 
- at least then the password will be protected all time.
-  there is all user to use bycrypt gem then the sefty for us. 
-  because the password will be digested.
-  
-   my project done by JWT stands for JSON Web Token. It is a standard for authentication in applications. a successful login, the server sends a JWT to the client as proof of verification. 
-   Think of this as the ticket for a user to gain access to gated content or personal content. 
-   You should at this point be able to test out a login POST request with a previously created user.
-   
-  If the password and username are correct the response should provide a JWT token as proof of verification. 
-  if not you should hit the error message.
 
 
-  ## Color Reference
+# Secure rails application using JWT authentication(JSON Web Token)
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
+JSON Web Token is a proposed Internet standard for creating data with optional signature and/or optional encryption whose payload holds JSON that asserts some number of claims. The tokens are signed either using a private secret or a public/private key
 
+
+## Required dependencies:
+
+- Ruby is installed (v 3.0.0)
+
+- Rails is installed (v 7.0.3)
+
+- MySQL is installed
+
+- Git is installed
+
+- GitHub account is created
+
+
+## Major steps are followed to setup:
+
+- Setup a new Rails app
+
+- Database configuration setup (using MySQL)
+
+- Initialize a local repository using git
+
+- gitignore file created to add configuration.yml
+
+- configuration.yml file created to initialize environment variables
+
+- Create a new remote repository using GitHub
+
+- Change README.md and documentation added
+
+- Code Commited and Pushed to GitHub repository
+
+
+## Create configuration.yml to setup required environment variables
+
+* Go to the config directory
+* Create a new file with name configuration.yml
+
+
+## Required variables to define in configuration.yml
+
+Here are the variables we need to define in this file:
+
+JWT_DB_DEVELOPMENT: development_db_name
+
+JWT_DB_DEVELOPMENT_USERNAME: development_db_username
+
+JWT_DB_DEVELOPMENT_PASSWORD: development_db_password
+
+JWT_DB_PRODUCTION: production_db_name_xxx
+
+JWT_DB_PRODUCTION_USERNAME: production_db_username_xxx
+
+JWT_DB_PRODUCTION_PASSWORD: production_db_password_xxx
+
+JWT_DB_TEST: test_db_name
 
 
 
@@ -60,23 +97,11 @@ Create Model
 $ rails g model email password_digest
 ```
 
-Let's run our migration with the following command:
-```bash
-$ bin/rails db:create
-
-$ bin/rails db:migrate
-```
-
-
 
 ## Add Gem File
 
 ```bash
 gem "bcrypt"
-```
-Bootstrap gem File
-```bash
- gem 'bootstrap', '~> 5.2.0'
 ```
 Jwt gem File
 ```bash

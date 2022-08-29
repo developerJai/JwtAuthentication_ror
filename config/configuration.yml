@@ -1,0 +1,13 @@
+JWT_DB_DEVELOPMENT: jwt_development
+
+JWT_DB_DEVELOPMENT_USERNAME: root
+
+JWT_DB_DEVELOPMENT_PASSWORD: Password
+
+JWT_DB_PRODUCTION: jwt_production
+
+JWT_DB_PRODUCTION_USERNAME: jwt
+
+JWT_DB_PRODUCTION_PASSWORD: production_db_password_xxx
+
+JWT_DB_TEST: jwt_test

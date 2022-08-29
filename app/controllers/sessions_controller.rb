@@ -5,16 +5,18 @@ class SessionsController < ApplicationController
       @user = User.find_by(id: session[:user_id])
     end
   end
+
   def new
     user = User.find_by_email(params[:email])
-  end   
+  end 
+
   def create
   @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       token = encode_token({user_id: @user.id})
       UserSession.create(user_id:@user.id,token:token) 
-    redirect_to sessions_index_path
+      redirect_to sessions_index_path
     else
       flash.now[:alert] = "Email or password is invalid"
       render "new"
